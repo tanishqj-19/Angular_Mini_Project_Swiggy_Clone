@@ -24,18 +24,22 @@ Additionally, the project includes services responsible for managing data and im
      - **Featured Restaurants**: Showcases a curated list of restaurants based on factors like popularity.
      - **Footer**: Contains useful links and footer information.
    - **Components Used**: Header, Footer, Popular Categories, Restaurant Card (for Featured Restaurants).
+     ![image](https://github.com/user-attachments/assets/cff5c623-ccfb-42e1-af5e-c391b004a7c5)
+
 
 2. **Explore Page**
    - **Purpose**: Offers additional browsing options, showing more restaurants based on user interests.
    - **Functionality**: May include filters or sorting options to help users find specific restaurants.
    - **Components Used**: Restaurant cards collection for browsing.
-     ![image](https://github.com/user-attachments/assets/8175fa4b-82b0-4652-a695-75666903ac42)
+     ![image](https://github.com/user-attachments/assets/38be6c02-b869-48c3-a44a-54e382a4f123)
+
 
 3. **Search Page**
    - **Purpose**: Enables users to search for food items or restaurants.
    - **Functionality**: Displays relevant search results as users input a search term.
    - **Components Used**: Search input field and results display section.
-     ![image](https://github.com/user-attachments/assets/c0a9988f-5611-40ce-97e0-df8beb768fca)
+     ![image](https://github.com/user-attachments/assets/cff909e6-2b8d-410e-9311-616f8e631ffa)
+
 
 4. **Cart Page**
    - **Purpose**: Displays all the items added to the user's shopping cart.
@@ -43,7 +47,8 @@ Additionally, the project includes services responsible for managing data and im
      - Users can modify the quantity of items or remove them.
      - If the cart is empty, a message prompts users to browse restaurants and add items.
    - **Components Used**: Cart item cards, total amount display, empty cart message.
-     ![image](https://github.com/user-attachments/assets/be77f7a1-8953-47a9-9975-fe589c49f2c9)
+     ![image](https://github.com/user-attachments/assets/ad79e8e0-c20b-4a98-8b6f-ff109936b376)
+
 
 5. **Sign-In Page**
    - **Purpose**: Allows users to log in by entering their email, name, and phone number.
@@ -52,7 +57,8 @@ Additionally, the project includes services responsible for managing data and im
      - Once the sign-in button is clicked, validated data is sent to a MockAPI.
      - After successful login, the user is redirected to the Home Page, where their name appears in place of "Sign In" in the header.
    - **Components Used**: Input fields and validation messages.
-     ![image](https://github.com/user-attachments/assets/4e8f03d3-d531-4476-87ec-1d01ceb6baef)
+     ![image](https://github.com/user-attachments/assets/373e9e8e-a758-4f3a-ae5b-8c6bceceae91)
+
 
 
 
@@ -99,7 +105,8 @@ The **components** folder includes reusable building blocks that promote modular
 2. **Footer**
    - **Purpose**: Displays footer information and important links at the bottom of each page.
    - **Usage**: Used across various pages, with frequent inclusion on the Home Page and main views.
-     ![image](https://github.com/user-attachments/assets/20ea9482-fc0c-4ae0-a0c7-746cff852a54)
+     ![image](https://github.com/user-attachments/assets/c484a5dc-d5ee-4a0b-b1e9-be6bf7ea5939)
+
 
 3. **Restaurant Card**
    - **Purpose**: Showcases individual restaurant details in a clean, card-based layout.
@@ -122,7 +129,8 @@ The **components** folder includes reusable building blocks that promote modular
      - Includes the restaurant’s address, rating, and description.
      - Shows a list of menu items available at the restaurant.
    - **Usage**: Accessed when a user clicks on a restaurant card to view more details.
-     ![image](https://github.com/user-attachments/assets/dc81b3bf-42d6-4912-8a7f-9dc61ad01b21)
+     ![image](https://github.com/user-attachments/assets/496b6f64-c0b5-488d-b7a0-59eb3a219d45)
+
 
 ---
 
