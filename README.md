@@ -1,141 +1,137 @@
 # Swiggy Clone Project
 
-This project is a front-end clone of Swiggy, designed with Angular. The application allows users to explore restaurants, search for items, sign in, add items to a cart, and view detailed information about each restaurant. This README provides a comprehensive overview of the project structure and functionality of each folder, page, and component.
+This project is an Angular-based front-end clone inspired by Swiggy. The app allows users to browse through various restaurants, search for dishes, sign in, add products to a shopping cart, and access detailed information about each restaurant. It's tech stack contains Angular, Tailwind CSS and Mock API for authentication.
 
-## DEMO URL :- https://swiggy-clone-angular.netlify.app/
+## Check it Out Live :- https://angular-mini-project-swiggy-clone.vercel.app/
 
-## Project Structure
+## Project Organization
 
-The main project structure under the `src/app` folder is organized into two primary folders:
-- **pages**: Contains main pages the user navigates to, such as Home, Search, Cart, etc.
-- **components**: Contains reusable components like the header, footer, and restaurant cards.
+The project’s directory under the `src/app` folder is structured into two main sections:
 
-Additionally, the project includes services that handle data and business logic.
+- **pages**: Contains the primary pages that users interact with, such as Home, Login, Search, Cart, and more.
+- **components**: Holds reusable UI elements like the header, footer, categories, restaurant card components.
 
-### Pages
+Additionally, the project includes services responsible for managing data and implementing business logic.
+
+
+## Pages Overview
 
 1. **Home Page**
-   - **Purpose**: This is the main landing page of the application, similar to the Swiggy homepage.
+   - **Purpose**: Serves as the main entry point to the application, similar to Swiggy's homepage.
    - **Sections**:
-     - **Header**: Contains the main navigation menu.
-     - **Popular Categories**: Displays a set of popular food categories that users can explore.
-     - **Featured Restaurants**: Lists restaurants prominently featured based on popularity or other criteria.
-     - **Footer**: Contains footer information and links.
-   - **Components Used**: Header, Footer, Popular Categories, Restaurant Card (used in the Featured Restaurants section).
+     - **Header**: Provides the primary navigation options.
+     - **Popular Categories**: Highlights popular food categories for users to explore.
+     - **Featured Restaurants**: Showcases a curated list of restaurants based on factors like popularity.
+     - **Footer**: Contains useful links and footer information.
+   - **Components Used**: Header, Footer, Popular Categories, Restaurant Card (for Featured Restaurants).
 
-2. **Search Page**
-   - **Purpose**: Allows users to search for any food item or restaurant.
-   - **Functionality**: On entering a search term, it retrieves and displays relevant search results.
-   - **Components Used**: Typically includes an input field and a results display section.
-     ![image](https://github.com/user-attachments/assets/c0a9988f-5611-40ce-97e0-df8beb768fca)
-
-
-3. **Sign-In Page**
-   - **Purpose**: Prompts the user to sign in with an email, name, and phone number.
-   - **Functionality**:
-     - Form validation ensures valid data entry.
-     - On clicking the Sign-In button, validated data is sent to a MockAPI.
-     - Upon successful sign-in, the user is redirected to the Home Page, where their name replaces the "Sign In" text in the header
-   - **Components Used**: Form fields and validation messages.
-     ![image](https://github.com/user-attachments/assets/4e8f03d3-d531-4476-87ec-1d01ceb6baef)
-
-
-4. **Cart Page**
-   - **Purpose**: Displays all items the user has added to their cart.
-   - **Functionality**:
-     - Allows users to increase or decrease the quantity of items.
-     - Enables users to remove individual items or clear the cart entirely.
-     - If the cart is empty, a message prompts the user to explore restaurants and add items to the cart.
-   - **Components Used**: Cart item cards, total amount display, and empty cart message.
-     ![image](https://github.com/user-attachments/assets/be77f7a1-8953-47a9-9975-fe589c49f2c9)
-
-
-5. **Explore Page**
-   - **Purpose**: Displays additional browsing options or restaurants based on user interest.
-   - **Functionality**: May include filters or sorting options for restaurant exploration.
-   - **Components Used**: Typically includes a collection of restaurant cards.
+2. **Explore Page**
+   - **Purpose**: Offers additional browsing options, showing more restaurants based on user interests.
+   - **Functionality**: May include filters or sorting options to help users find specific restaurants.
+   - **Components Used**: Restaurant cards collection for browsing.
      ![image](https://github.com/user-attachments/assets/8175fa4b-82b0-4652-a695-75666903ac42)
 
+3. **Search Page**
+   - **Purpose**: Enables users to search for food items or restaurants.
+   - **Functionality**: Displays relevant search results as users input a search term.
+   - **Components Used**: Search input field and results display section.
+     ![image](https://github.com/user-attachments/assets/c0a9988f-5611-40ce-97e0-df8beb768fca)
 
-### Components
+4. **Cart Page**
+   - **Purpose**: Displays all the items added to the user's shopping cart.
+   - **Functionality**:
+     - Users can modify the quantity of items or remove them.
+     - If the cart is empty, a message prompts users to browse restaurants and add items.
+   - **Components Used**: Cart item cards, total amount display, empty cart message.
+     ![image](https://github.com/user-attachments/assets/be77f7a1-8953-47a9-9975-fe589c49f2c9)
 
-The **components** folder contains all reusable components that enhance modularity and reusability across the application.
+5. **Sign-In Page**
+   - **Purpose**: Allows users to log in by entering their email, name, and phone number.
+   - **Functionality**:
+     - Form validation ensures correct data entry.
+     - Once the sign-in button is clicked, validated data is sent to a MockAPI.
+     - After successful login, the user is redirected to the Home Page, where their name appears in place of "Sign In" in the header.
+   - **Components Used**: Input fields and validation messages.
+     ![image](https://github.com/user-attachments/assets/4e8f03d3-d531-4476-87ec-1d01ceb6baef)
 
-1. **Footer**
-   - **Purpose**: Displays footer links and information at the bottom of each page.
-   - **Usage**: Used in multiple pages, especially the Home Page and other main views.
-     ![image](https://github.com/user-attachments/assets/20ea9482-fc0c-4ae0-a0c7-746cff852a54)
-
-
-2. **Header**
-   - **Purpose**: The main navigation bar for the application.
-   - **Features**:
-     - Contains navigation links to Home, Cart, Explore, and Account pages.
-     - Shows the user’s name upon successful sign-in.
-   - **Usage**: Rendered at the top of every page for consistent navigation.
-
-3. **Menu Item**
-   - **Purpose**: Displays individual menu items in a structured card format.
-   - **Usage**: Primarily used within the Restaurant Detail Page to showcase each restaurant's menu.
-   - **Features**: Displays item name, price, description, and "Add to Cart" functionality.
-
-4. **Popular Categories**
-   - **Purpose**: Displays a collection of popular food categories.
-   - **Usage**: Featured on the Home Page to encourage exploration of popular food types.
-
-5. **Restaurant Card**
-   - **Purpose**: Displays individual restaurant information in a structured card format.
-   - **Features**: Shows restaurant image, name, rating, category, and a partial location.
-   - **Usage**: Used across pages where restaurant listings are required, such as Home Page, Search Page, and Explore Page.
-
-6. **Restaurant Detail Page**
-   - **Purpose**: Displays detailed information about a specific restaurant.
-   - **Features**: 
-     - Shows restaurant details like address, rating, and description.
-     - Lists menu items associated with the restaurant.
-   - **Usage**: Accessed when a user clicks on a specific restaurant card.
-     ![image](https://github.com/user-attachments/assets/dc81b3bf-42d6-4912-8a7f-9dc61ad01b21)
 
 
 ### Services
 
-The **services** folder contains Angular services that manage data handling and API communication for various parts of the application.
+The **services** folder holds Angular services responsible for managing data, handling business logic, and interacting with APIs throughout the application.
 
-1. **Cart Service**
-   - **Purpose**: Manages all cart-related operations.
+1. **Restaurant Service**
+   - **Purpose**: Handles all restaurant-related data operations.
+   - **Features**:
+     - Fetches a list of restaurants.
+     - Retrieves details for individual restaurants based on their unique identifier.
+   - **Usage**: This service is used across various components like the Home Page, Restaurant Card, and Restaurant Detail Page to display restaurant information.
+
+2. **Cart Service**
+   - **Purpose**: Manages operations related to the shopping cart.
    - **Features**:
      - Adds items to the cart.
-     - Adjusts item quantities.
-     - Removes individual items or clears the cart.
-   - **Usage**: Utilized by Cart Page and components that modify the cart (like Menu Item).
+     - Updates the quantity of items in the cart.
+     - Removes items or clears the entire cart.
+   - **Usage**: Employed by the Cart Page and components such as Menu Item to update and manage the cart.
 
-2. **Menu Item Service**
-   - **Purpose**: Manages data retrieval and business logic for menu items.
-   - **Usage**: Used by the Restaurant Detail Page and Menu Item components to display and handle menu data.
+3. **Menu Item Service**
+   - **Purpose**: Manages the data and business logic for menu items.
+   - **Usage**: Primarily used by the Restaurant Detail Page and the Menu Item components to retrieve and display menu data.
 
-3. **Restaurant Service**
-   - **Purpose**: Manages data related to restaurants.
-   - **Features**:
-     - Retrieves restaurant listings.
-     - Fetches details for specific restaurants based on their ID.
-   - **Usage**: Utilized across components that display restaurant information, including the Home Page, Restaurant Card, and Restaurant Detail Page.
-
-4. **Popular Categories Service ( menu service )**
-   - **Purpose**: Fetches and provides data for popular categories.
-   - **Usage**: Mainly used by the Popular Categories component on the Home Page.
+4. **Popular Categories Service (Menu Service)**
+   - **Purpose**: Retrieves and provides data for popular food categories.
+   - **Usage**: This service is primarily used by the Popular Categories component on the Home Page to show trending food categories to users.
 
 ---
 
-## Additional Information
+### Components
+
+The **components** folder includes reusable building blocks that promote modularity and simplify code maintenance across the application.
+
+1. **Header**
+   - **Purpose**: Acts as the primary navigation bar across the application.
+   - **Features**:
+     - Provides navigation links to key pages such as Home, Cart, Explore, and Account.
+     - Displays the user’s name when signed in.
+   - **Usage**: Consistently rendered at the top of every page to facilitate smooth navigation.
+
+2. **Footer**
+   - **Purpose**: Displays footer information and important links at the bottom of each page.
+   - **Usage**: Used across various pages, with frequent inclusion on the Home Page and main views.
+     ![image](https://github.com/user-attachments/assets/20ea9482-fc0c-4ae0-a0c7-746cff852a54)
+
+3. **Restaurant Card**
+   - **Purpose**: Showcases individual restaurant details in a clean, card-based layout.
+   - **Features**:
+     - Displays the restaurant's image, name, rating, category, and a snippet of its location.
+   - **Usage**: Utilized on the Home Page, Search Page, and Explore Page for listing restaurants.
+
+4. **Menu Item**
+   - **Purpose**: Represents individual food items within a restaurant’s menu.
+   - **Features**: Displays the item’s name, price, description, and a button to add it to the cart.
+   - **Usage**: Commonly used in the Restaurant Detail Page to present each item on the restaurant's menu.
+
+5. **Popular Categories**
+   - **Purpose**: Presents a curated list of popular food categories.
+   - **Usage**: Featured on the Home Page to encourage users to explore various food types.
+
+6. **Restaurant Detail Page**
+   - **Purpose**: Displays detailed information about a specific restaurant.
+   - **Features**:
+     - Includes the restaurant’s address, rating, and description.
+     - Shows a list of menu items available at the restaurant.
+   - **Usage**: Accessed when a user clicks on a restaurant card to view more details.
+     ![image](https://github.com/user-attachments/assets/dc81b3bf-42d6-4912-8a7f-9dc61ad01b21)
+
+---
+
+
+## Authentication & Routing
 
 - **Mock API**: This project uses MockAPI for handling user sign-in.
 - **Angular Modules**: The project is modularized to ensure separation of concerns, and services are injected where needed for optimal data flow and management.
 - **Routing**: Angular Router is used for navigating between pages (like Home, Cart, Sign-In, etc.).
   
-## Running the Project
 
-To run the project locally:
-1. Clone the repository.
-2. Install dependencies with `npm install`.
-3. Start the development server with `ng serve`.
 
