@@ -1,4 +1,4 @@
-# Swiggy Clone Project
+# Swiggy Delivery
 
 This project is an Angular-based front-end clone inspired by Swiggy. The app allows users to browse through various restaurants, search for dishes, sign in, add products to a shopping cart, and access detailed information about each restaurant. It's tech stack contains Angular, Tailwind CSS and Mock API for authentication.
 
