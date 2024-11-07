@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router'; 
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink, RouterLinkActive],
+  imports: [NgFor, NgIf, RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
   cartItems: any[] = [];
+  totalAmount: number = 0; 
   user: { name: string, email: string } | null = null;
 
   constructor(private cartService: CartService, private router: Router) {}
@@ -23,14 +24,21 @@ export class CartComponent implements OnInit {
       this.loadCartItems();
     }
   }
+
   fetchUserData() {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       this.user = JSON.parse(storedUser);
     }
   }
+
   loadCartItems() {
-    this.cartItems = this.cartService.getCartItems(); 
+    this.cartItems = this.cartService.getCartItems();
+    this.updateTotalAmount(); // Update the total amount whenever items are loaded
+  }
+
+  updateTotalAmount() {
+    this.totalAmount = this.cartService.getTotalAmount(); // Get the total from the CartService
   }
 
   removeFromCart(item: any) {
@@ -56,7 +64,7 @@ export class CartComponent implements OnInit {
     this.cartService.clearCart(); 
     this.loadCartItems(); 
   }
-  // Redirects the user to the sign-in page if they are not logged in
+
   redirectToSignIn() {
     this.router.navigate(['/signin']);
   }

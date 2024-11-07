@@ -51,5 +51,14 @@
         </div>
       </div>
     </ng-container>
+
+    <div class="flex flex-col space-y-4 justify-between items-center ">
+      <div class="text-2xl">
+        {{totalAmount | currency: 'INR'}}
+      </div>
+      <div>
+        <button class="px-4 py-2 bg-sky-500 text-white rounded-md">Pay now</button>
+      </div>
+    </div>
   </div>
   

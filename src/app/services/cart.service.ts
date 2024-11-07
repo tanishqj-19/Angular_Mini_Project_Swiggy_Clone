@@ -8,6 +8,8 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private cartItems = new Map<string, { item: any; quantity: number }>();
   private totalItemsCount = new BehaviorSubject<number>(0);
+
+
   totalItemsCount$ = this.totalItemsCount.asObservable();
 
   constructor() {
@@ -80,6 +82,16 @@ export class CartService {
       quantity
     }));
   }
+
+
+  getTotalAmount(): number {
+    let totalAmount = 0;
+    this.cartItems.forEach(({ item, quantity }) => {
+      totalAmount += item.price * quantity;
+    });
+    return totalAmount;
+  }
+  
  
 
   
